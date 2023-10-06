@@ -9,7 +9,7 @@ jobs:
             LIKE: please like share
         steps:
             -   name: sample for an youtube channel
-                run: echo "$LIKE and $SUBSCRIBE our $CHANNEL"
+                run: echo "$LIKE and $SUBSCRIBE  $CHANNEL"
                 
                 env:
                     CHANNEL: devops
