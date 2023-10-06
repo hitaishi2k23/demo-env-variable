@@ -1,18 +1,18 @@
-name: variable workflow
+name: environment variable workflow
 on: push
-env:
-    SUBSCRIBE: subscribe
-    CHANNEL: devops
-    LIKE: please like share
 jobs:
     run-environment-variable:
         runs-on: ubuntu-latest
-        
         steps:
-            -   name: sample for an youtube channel
-                run: echo "$LIKE and $SUBSCRIBE  $CHANNEL"
-                
-                
-
-        
-                
+            -   name: environment variable
+                run: |
+                    echo "GITHUB_ACTION: ${GITHUB_ACTION}"
+                    echo "HOME: ${HOME}"
+                    echo "GITHUB_WORKSPACE:${GITHUB_WORKSPACE}"
+                    echo "GITHUB_ACTIONS: ${GITHUB_ACTIONS}"
+                    echo "GITHUB_API_URL: ${GITHUB_API_URL}"
+                    echo "GITHUB_EVENT_PATH: ${GITHUB_EVENT_PATH}"
+                    echo "GITHUB_JOB: ${GITHUB_JOB}"
+                    echo "GITHUB_REPOSITORY: ${GITHUB_REPOSITORY}"
+                    echo "GITHUB_SHA: ${GITHUB_SHA}"
+                    echo "RUNNER_OS: ${RUNNER_OS}"
