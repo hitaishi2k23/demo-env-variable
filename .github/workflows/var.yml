@@ -1,5 +1,5 @@
 name: variable workflow
-on: push
+on: workflow_dispatch
 env:
     SUBSCRIBE: subscribe
 jobs:
